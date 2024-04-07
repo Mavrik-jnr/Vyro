@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,10 +18,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header>
-          Hell
-        </header>
+      <body className={`${inter.className} bg-primary`}>
+        <nav className="flex items-center w-full justify-between px-12 py-5 fixed backdrop-blur-md">
+          <div className="basis-3/4">
+
+          <p className="font-bold text-2xl">VYRO</p>
+          </div>
+
+          <div className="flex items-center gap-16 basis-1/2 justify-end">
+            <Link href="Marketplace">
+            Marketplace
+            </Link>
+            <Link href="Marketplace">
+           Rankings
+            </Link>
+            <Link href="Connect">
+           Connect a wallet
+            </Link>
+            <Link href="signup" className="flex items-center gap-2 bg-cta p-4 px-8 rounded-lg "><Image width="24" height="24" src="/images/icons/user.svg" alt="signup"></Image> <p>Signup</p></Link>
+          </div>
+        </nav>
 
 
         {children}
