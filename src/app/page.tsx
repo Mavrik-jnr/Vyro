@@ -1,11 +1,14 @@
 import ArtistCreator from "@/components/ArtistCreator";
+import Category from "@/components/Category";
 import Trending from "@/components/Trending";
+import { TopCreators, categories } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-28 gap-60 ">
+    <main className="flex min-h-screen flex-col items-center justify-center p-28 gap-64 ">
   <section className="flex flex-row flex-auto gap-10 items-center w-full justify-between pt-20 ">
     <div className="flex items-start flex-col flex-initial gap-6 w-1/2">
 
@@ -48,13 +51,13 @@ export default function Home() {
     </article>
   </section>
 
-  <section className="flex flex-col flex-auto gap-10 items-start w-full">
+  <section className="flex flex-col flex-auto gap-24 items-start w-full">
     <header className="">
 
       <h1 className="text-4xl font-bold">
           Trending Collection
         </h1>
-        <p className="mt-4">Checkout our weekly updated trending collection.</p>
+        <p className="mt-4 text-2xl">Checkout our weekly updated trending collection.</p>
     </header>
 
     <div className="flex justify-between w-full">
@@ -74,15 +77,34 @@ export default function Home() {
         <p className="mt-4">Checkout our Top Rated Creators On The NFT Marketplace</p>
 </div>
 
-        <Link href='/rankings' className="flex items-center py-4 px-6 gap-4 m-0 h-fit rounded-xl border-solid border-2 border-cta"><Image src='/images/icons/RocketLaunchCta.svg' width="24" height="24" alt="rocket launch"></Image> <p>View Rankings</p></Link>
+        <Link href='/rankings' className="flex items-center py-4 px-12 gap-4 m-0 h-fit rounded-xl border-solid border-2 border-cta"><Image src='/images/icons/RocketLaunchCta.svg' width="24" height="24" alt="rocket launch"></Image> <p>View Rankings</p></Link>
     </header>
 
-    <div className="flex justify-between w-full">
-<ArtistCreator/>
+    <div className="grid grid-cols-4 w-full gap-16">
+     {
+      TopCreators.map((item,id)=>(
+
+<ArtistCreator key={id} id={id+1} artistName={item.artistName}/>
+      ))
+
+
+      }
 
     </div>
   </section>
 
+<section className="w-full">
+<h1 className="text-4xl font-bold mb-16">
+          Browse Categories
+        </h1>
+
+        <div className=" grid grid-cols-4 justify-center items-center justify-items-center gap-14 cursor-pointer">
+          {categories.map((item)=>(
+          <Category key={item.category} categoryText={item.category} />
+          ))}
+        </div>
+
+</section>
     </main>
   );
 }

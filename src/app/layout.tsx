@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-primary`}>
-        <nav className="flex items-center w-full justify-between px-12 py-5 fixed backdrop-blur-md">
+        <nav className="flex items-center w-full justify-between px-12 py-5 fixed backdrop-blur-md z-50">
           <div className="basis-3/4">
 
           <p className="font-bold text-2xl">VYRO</p>
