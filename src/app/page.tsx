@@ -100,10 +100,24 @@ export default function Home() {
 
         <div className=" grid grid-cols-4 justify-center items-center justify-items-center gap-14 cursor-pointer">
           {categories.map((item)=>(
-          <Category key={item.category} categoryText={item.category} />
+          <Category key={item.category} categoryText={item.category} categoryPicture={item.categoryPicture} categoryIcon={item.categoryIcon}/>
           ))}
         </div>
 
+</section>
+<section className="w-full"> 
+<header className="flex justify-between w-full items-end">
+
+<div>
+
+      <h1 className="text-4xl font-bold">
+          Discover more NFTs
+        </h1>
+        <p className="mt-4">Explore New Trending NFTs</p>
+</div>
+
+        <Link href='/rankings' className="flex items-center py-4 px-12 gap-4 m-0 h-fit rounded-xl border-solid border-2 border-cta"><Image src='/images/icons/RocketLaunchCta.svg' width="24" height="24" alt="rocket launch"></Image> <p>See all</p></Link>
+    </header>
 </section>
     </main>
   );
