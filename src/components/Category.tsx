@@ -9,7 +9,7 @@ type Props = {
 
 function Category({categoryText,categoryPicture, categoryIcon}: Props) {
   return (
-    <article className='flex flex-col w-full'>
+    <article className='flex flex-col w-full max-w-[240px]'>
         <div  className='w-[100%] relative h-[240px] '>
         <span className="flex justify-center items-center absolute -inset-0 z-10 backdrop-blur" aria-hidden="true">
           

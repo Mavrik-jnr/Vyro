@@ -1,3 +1,26 @@
+export const staticNfts = [
+    {
+        nftImg:"/images/nfts/more1.png",
+        artist:"/images/Avatars/avatar16.svg",
+        artistName:"MoonDancer",
+        title: "Distant Galaxy"
+    },
+    {
+        nftImg:"/images/nfts/more2.png",
+        artist:"/images/Avatars/avatar17.svg",
+        artistName:"NebulaKid",
+        title:"Life on Edena"
+    },
+    {
+        nftImg:"/images/nfts/more3.png",
+        artist:"/images/Avatars/Avatar10.svg",
+        artistName:"Spaceone",
+        title:"AstroFiction"
+    },
+]
+
+
+
 export const categories = [
     {
         category: "Art",

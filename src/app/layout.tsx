@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-primary`}>
+      <body className={`${inter.className} bg-primary flex flex-col items-center`}>
         <nav className="flex items-center w-full justify-between px-12 py-5 fixed backdrop-blur-md z-50">
           <div className="basis-3/4">
 
