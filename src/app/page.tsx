@@ -308,7 +308,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full  max-w-[1440px] flex justify-center ">
-        <article className="bg-secondary p-10 w-full max-w-[1025px]  flex  gap-36 justify-between rounded-3xl">
+        <article className="bg-secondary p-10 w-full max-w-[1440px]  flex  gap-32 items-center justify-center rounded-3xl">
           <div className=" w-full h-[310px] max-w-[425px] relative">
           <Image src="/images/nfts/astronaut.png" alt='art category'  layout='fill' objectFit='cover' className='rounded-3xl' ></Image>
           </div>
@@ -325,7 +325,7 @@ export default function Home() {
         // type={show ? 'text' : 'password'}
         placeholder='Enter Your Email'
       />
-      <InputRightElement width="50%" >
+      <InputRightElement width="40%" >
         <Button h='100%' width="100%" size='sm' py="12px" px="22px" className="bg-cta rounded-3xl">
           {/* {show ? 'Hide' : 'Show'} */}
           <Image
