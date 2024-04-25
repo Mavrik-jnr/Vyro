@@ -3,10 +3,14 @@ import Category from "@/components/Category";
 import NftCard from "@/components/NftCard";
 import Trending from "@/components/Trending";
 import { TopCreators, categories, staticNfts } from "@/lib/utils";
+import { Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const handleClick = ()=>{
+
+  }
   return (
     <main className="flex min-h-screen flex-col items-center justify-center py-28 gap-64 w-full ">
       <section className="flex flex-row flex-auto gap-10 items-center w-full justify-between pt-20 max-w-[1440px] ">
@@ -302,6 +306,42 @@ export default function Home() {
             </div>
           </article>
         </div>
+      </section>
+      <section className="w-full  max-w-[1440px] flex justify-center ">
+        <article className="bg-secondary p-10 w-full max-w-[1025px]  flex  gap-36 justify-between rounded-3xl">
+          <div className=" w-full h-[310px] max-w-[425px] relative">
+          <Image src="/images/nfts/astronaut.png" alt='art category'  layout='fill' objectFit='cover' className='rounded-3xl' ></Image>
+          </div>
+          <div>
+          <h3 className="text-4xl  font-bold mb-7">Join Our Weekly Digest</h3>
+          <p className="text-xl mb-7">Get exclusive promotions & updates straight to your inbox.</p>
+          <InputGroup size='md'>
+      <Input
+        // pr='70%'
+        width="100%"
+        color="black"
+        p="12px"
+        className="rounded-3xl"
+        // type={show ? 'text' : 'password'}
+        placeholder='Enter Your Email'
+      />
+      <InputRightElement width="50%" >
+        <Button h='100%' width="100%" size='sm' py="12px" px="22px" className="bg-cta rounded-3xl">
+          {/* {show ? 'Hide' : 'Show'} */}
+          <Image
+              src="/images/icons/envelope.svg"
+              width="24"
+              height="24"
+              className="mr-2"
+              alt="rocket launch"
+            ></Image>
+          Subscribe
+        </Button>
+      </InputRightElement>
+    </InputGroup>
+          </div>
+        </article>
+
       </section>
     </main>
   );
